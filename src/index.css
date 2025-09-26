@@ -1,0 +1,132 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body + root */
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  font-family: 'Inter', Arial, sans-serif;
+  overflow: hidden;
+  background: #05060a;
+  color: white;
+}
+
+/* Input and select */
+input, select {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 6px;
+  padding: 6px 10px;
+  outline: none;
+  font-size: 14px;
+}
+
+input::placeholder {
+  color: rgba(255,255,255,0.6);
+}
+
+/* Buttons */
+button {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+/* HUD top bar */
+.hud-bar {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  backdrop-filter: blur(8px);
+  background: rgba(0,0,0,0.4);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Active project drawer */
+.project-panel {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 350px;
+  max-width: 90vw;
+  background: rgba(0,0,0,0.7);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 15px;
+  padding: 15px;
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.project-panel.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(20px);
+}
+
+.project-panel .tags span {
+  display: inline-block;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 2px 6px;
+  font-size: 11px;
+  border-radius: 6px;
+  margin-right: 4px;
+  margin-top: 4px;
+}
+
+/* Legend */
+.legend {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  background: rgba(0,0,0,0.5);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 15px;
+  padding: 10px;
+  font-size: 12px;
+  backdrop-filter: blur(6px);
+}
+
+.legend div {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.legend .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Tooltip */
+.tooltip {
+  position: fixed;
+  z-index: 50;
+  padding: 2px 6px;
+  background: rgba(0,0,0,0.8);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 6px;
+  font-size: 12px;
+  pointer-events: none;
+}
