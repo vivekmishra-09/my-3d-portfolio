@@ -342,8 +342,8 @@ scene.add(dysonSphere);
 // Knots (nodes) par chhote modules
 const nodeGeometry = new THREE.SphereGeometry(0.08, 8, 8); // chhota sphere
 const nodeMaterial = new THREE.MeshStandardMaterial({
-  color: 0xffaa00,       // glowing orange modules
-  emissive: 0xff6600,    // thoda glow effect
+  color: 221700,       // glowing black modules
+  emissive: 0x221700,    // thoda glow effect
   metalness: 0.8,
   roughness: 0.3
 });
